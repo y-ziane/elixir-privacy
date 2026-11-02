@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +8,8 @@
   <meta name="description" content="Privacy Policy for Elixir Video Player (Elixir Player) for Android.">
   <meta name="robots" content="index, follow">
   <title>Privacy Policy — Elixir Video Player</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233B82F6'/%3E%3Cpath d='M12 9.5v13l11-6.5-11-6.5z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233B82F6'/%3E%3Cpath d='M12 9.5v13l11-6.5-11-6.5z' fill='%23FFFFFF'/%3E%3C/svg%3E">
   <style>
     :root {
       --bg: #f7f9fc;
@@ -64,6 +66,7 @@
       body {
         padding: 1rem 0.75rem 2.5rem;
       }
+
       main {
         padding: 1.75rem 1.25rem;
         border-radius: 12px;
@@ -182,6 +185,7 @@
         color: #000000;
         padding: 0;
       }
+
       main {
         border: none;
         padding: 0;
@@ -190,17 +194,21 @@
     }
   </style>
 </head>
+
 <body>
   <main>
     <header>
       <div class="brand"><span>Elixir</span>Player</div>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective Date: November 2, 2026 &middot; App: Elixir Video Player (<code>com.media.elixirplayer</code>)</p>
+      <p class="meta">Effective Date: November 2, 2026 &middot; App: Elixir Video Player
+        (<code>com.media.elixirplayer</code>)</p>
     </header>
 
     <div class="summary">
       <strong>Summary</strong>
-      Elixir Video Player does not collect, store on external servers, transmit, sell, or share any personal data. The app operates without user accounts, analytics, crash-reporting trackers, or advertising SDKs. All playback history and preferences stay locally on your device.
+      Elixir Video Player does not collect, store on external servers, transmit, sell, or share any personal data. The
+      app operates without user accounts, analytics, crash-reporting trackers, or advertising SDKs. All playback history
+      and preferences stay locally on your device.
     </div>
 
     <section aria-labelledby="no-collection">
@@ -217,12 +225,19 @@
 
     <section aria-labelledby="local-data">
       <h2 id="local-data">2. Data Stored Locally on Your Device</h2>
-      <p>To provide media library features and seamless playback, the app stores non-personal state strictly inside its private storage sandbox on your device:</p>
+      <p>To provide media library features and seamless playback, the app stores non-personal state strictly inside its
+        private storage sandbox on your device:</p>
       <ul>
-        <li><strong>Playback State &amp; History:</strong> File URIs, titles, playback positions, and last-played timestamps so you can resume videos where you left off and sort by <em>Recently Played</em>.</li>
-        <li><strong>Library Metadata &amp; Bookmarks:</strong> Bookmarked video URIs, played/new badge status for local videos, and a lightweight lookup cache indicating whether a local video contains embedded subtitle tracks.</li>
-        <li><strong>App Preferences:</strong> Interface settings including Light/Dark theme, color palette, list or grid layout, sort order, quick-select behavior, <em>New</em> badge expiry duration, and visible metadata badges (resolution, file size, subtitles, and file extension).</li>
-        <li><strong>Thumbnail Cache:</strong> Video preview thumbnails generated locally from your media files and saved in the app's private cache directory for fast scrolling.</li>
+        <li><strong>Playback State &amp; History:</strong> File URIs, titles, playback positions, and last-played
+          timestamps so you can resume videos where you left off and sort by <em>Recently Played</em>.</li>
+        <li><strong>Library Metadata &amp; Bookmarks:</strong> Bookmarked video URIs, played/new badge status for local
+          videos, and a lightweight lookup cache indicating whether a local video contains embedded subtitle tracks.
+        </li>
+        <li><strong>App Preferences:</strong> Interface settings including Light/Dark theme, color palette, list or grid
+          layout, sort order, quick-select behavior, <em>New</em> badge expiry duration, and visible metadata badges
+          (resolution, file size, subtitles, and file extension).</li>
+        <li><strong>Thumbnail Cache:</strong> Video preview thumbnails generated locally from your media files and saved
+          in the app's private cache directory for fast scrolling.</li>
       </ul>
       <p>None of this local data is transmitted to the developer or any third party.</p>
     </section>
@@ -231,36 +246,57 @@
       <h2 id="permissions">3. Permissions &amp; Device Access</h2>
       <p>Elixir Video Player requests only the Android permissions required for core playback functionality:</p>
       <ul>
-        <li><strong>Media Access (<code>READ_MEDIA_VIDEO</code> on Android 13+ / <code>READ_EXTERNAL_STORAGE</code> on Android 12 and earlier):</strong> Used exclusively on-device via Android <code>MediaStore</code> to discover video files, group them by folder, read basic file attributes (title, duration, size, resolution, MIME type), generate thumbnails, and play your videos. Your media files never leave your device.</li>
-        <li><strong>User-Initiated File Actions:</strong> Deleting videos from your device uses Android's Scoped Storage confirmation prompt and occurs only when you explicitly confirm deletion. Loading external subtitle files (such as <code>.srt</code>) uses the Android system file picker, granting read access solely to the file you choose.</li>
-        <li><strong>Internet Access (<code>INTERNET</code>):</strong> Used strictly when you manually enter a network stream link in the <strong>Play from URL</strong> feature (supporting direct HTTP/HTTPS media, HLS, and DASH streams). Elixir Video Player makes no background network connections and operates no backend servers. When you stream from a third-party URL, your device connects directly to that host, which receives standard network request data (such as your IP address) under that provider's own privacy policy.</li>
-        <li><strong>Playback Controls:</strong> Audio volume gestures, player window brightness gestures, media session controls, and Picture-in-Picture (PiP) mode operate locally during active playback without recording or exporting any data.</li>
+        <li><strong>Media Access (<code>READ_MEDIA_VIDEO</code> on Android 13+ / <code>READ_EXTERNAL_STORAGE</code> on
+            Android 12 and earlier):</strong> Used exclusively on-device via Android <code>MediaStore</code> to discover
+          video files, group them by folder, read basic file attributes (title, duration, size, resolution, MIME type),
+          generate thumbnails, and play your videos. Your media files never leave your device.</li>
+        <li><strong>User-Initiated File Actions:</strong> Deleting videos from your device uses Android's Scoped Storage
+          confirmation prompt and occurs only when you explicitly confirm deletion. Loading external subtitle files
+          (such as <code>.srt</code>) uses the Android system file picker, granting read access solely to the file you
+          choose.</li>
+        <li><strong>Internet Access (<code>INTERNET</code>):</strong> Used strictly when you manually enter a network
+          stream link in the <strong>Play from URL</strong> feature (supporting direct HTTP/HTTPS media, HLS, and DASH
+          streams). Elixir Video Player makes no background network connections and operates no backend servers. When
+          you stream from a third-party URL, your device connects directly to that host, which receives standard network
+          request data (such as your IP address) under that provider's own privacy policy.</li>
+        <li><strong>Playback Controls:</strong> Audio volume gestures, player window brightness gestures, media session
+          controls, and Picture-in-Picture (PiP) mode operate locally during active playback without recording or
+          exporting any data.</li>
       </ul>
     </section>
 
     <section aria-labelledby="retention">
       <h2 id="retention">4. Data Retention, Backup &amp; Deletion</h2>
-      <p>All app settings, bookmarks, playback positions, and cached thumbnails remain on your device for as long as the app is installed. You have full control over this data at any time:</p>
+      <p>All app settings, bookmarks, playback positions, and cached thumbnails remain on your device for as long as the
+        app is installed. You have full control over this data at any time:</p>
       <ul>
-        <li><strong>Clear Cache or Storage:</strong> Open your device's <strong>Settings &rarr; Apps &rarr; Elixir Player &rarr; Storage &amp; cache</strong> to clear cached thumbnails (<em>Clear cache</em>) or reset all preferences, bookmarks, and playback history (<em>Clear storage</em>).</li>
-        <li><strong>Uninstallation:</strong> Uninstalling Elixir Video Player permanently removes its local app storage and cache from your device (without affecting your personal video files).</li>
-        <li><strong>Android System Backup:</strong> If Android Auto Backup is enabled in your device's operating system settings, Android may include app preferences in your personal system/cloud device backup. Those backups are governed by your device or OS provider's privacy policy; the developer cannot access them.</li>
+        <li><strong>Clear Cache or Storage:</strong> Open your device's <strong>Settings &rarr; Apps &rarr; Elixir
+            Player &rarr; Storage &amp; cache</strong> to clear cached thumbnails (<em>Clear cache</em>) or reset all
+          preferences, bookmarks, and playback history (<em>Clear storage</em>).</li>
+        <li><strong>Uninstallation:</strong> Uninstalling Elixir Video Player permanently removes its local app storage
+          and cache from your device (without affecting your personal video files).</li>
+        <li><strong>Android System Backup:</strong> If Android Auto Backup is enabled in your device's operating system
+          settings, Android may include app preferences in your personal system/cloud device backup. Those backups are
+          governed by your device or OS provider's privacy policy; the developer cannot access them.</li>
       </ul>
     </section>
 
     <section aria-labelledby="children">
       <h2 id="children">5. Children's Privacy</h2>
-      <p>Elixir Video Player does not knowingly collect any personal information from anyone, including children under the age of 13 (or the applicable minimum age in your jurisdiction).</p>
+      <p>Elixir Video Player does not knowingly collect any personal information from anyone, including children under
+        the age of 13 (or the applicable minimum age in your jurisdiction).</p>
     </section>
 
     <section aria-labelledby="changes">
       <h2 id="changes">6. Changes to This Privacy Policy</h2>
-      <p>If future updates to Elixir Video Player alter how data or permissions are handled, this Privacy Policy will be updated on this page with a revised effective date.</p>
+      <p>If future updates to Elixir Video Player alter how data or permissions are handled, this Privacy Policy will be
+        updated on this page with a revised effective date.</p>
     </section>
 
     <section aria-labelledby="contact">
       <h2 id="contact">7. Contact</h2>
-      <p>If you have any questions about this Privacy Policy or Elixir Video Player, please open an issue or reach out via our <a href="https://github.com/y-ziane/EXO" rel="noopener noreferrer">GitHub repository</a>.</p>
+      <p>If you have any questions about this Privacy Policy or Elixir Video Player, please open an issue or reach out
+        via our <a href="https://github.com/y-ziane/elixir-privacy" rel="noopener noreferrer">GitHub repository</a>.</p>
     </section>
   </main>
 
@@ -268,5 +304,5 @@
     &copy; 2026 Elixir Video Player. Static page hosted on GitHub Pages with zero cookies or trackers.
   </footer>
 </body>
-</html>
 
+</html>

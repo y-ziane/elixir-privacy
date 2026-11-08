@@ -200,31 +200,58 @@
     <header>
       <div class="brand"><span>Elixir</span>Player</div>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective Date: November 2, 2026 &middot; App: Elixir Video Player
-        (<code>com.media.elixirplayer</code>)</p>
+      <p class="meta">Last Updated: November 8, 2026 &middot; App: Elixir Video Player
+        (<code>com.media.elixirplayer</code>) &middot; Audience: 13+</p>
     </header>
 
     <div class="summary">
       <strong>Summary</strong>
-      Elixir Video Player does not collect, store on external servers, transmit, sell, or share any personal data. The
-      app operates without user accounts, analytics, crash-reporting trackers, or advertising SDKs. All playback history
-      and preferences stay locally on your device.
+      Elixir Video Player is a local-first media player intended for users aged <strong>13 and older</strong>. We do not
+      require user accounts or upload your media library, watch history, or preferences to developer servers. To keep
+      the app free, Elixir Video Player displays banner ads via <strong>Google AdMob</strong>, configured with Teen
+      (<code>T</code>) content ratings and Teen age-restricted ad treatment.
     </div>
 
-    <section aria-labelledby="no-collection">
-      <h2 id="no-collection">1. Information We Do Not Collect</h2>
-      <p>Elixir Video Player is designed as a local-first media player. We do not collect or process:</p>
+    <section aria-labelledby="first-party">
+      <h2 id="first-party">1. Information We Do Not Collect Directly</h2>
+      <p>The developer of Elixir Video Player operates no backend servers for user data and does not directly collect,
+        store, or access:</p>
       <ul>
-        <li>Personal identifiers (such as name, email address, phone number, or account credentials).</li>
-        <li>Device identifiers, advertising IDs, or fingerprinting data.</li>
-        <li>Location information.</li>
-        <li>Usage analytics, telemetry, or remote crash logs.</li>
+        <li>Personal contact details or account credentials (such as name, email address, or phone number).</li>
+        <li>Your local video files, filenames, folder structure, bookmarks, or playback history.</li>
+        <li>Precise GPS location, contacts, microphone, or camera input.</li>
       </ul>
-      <p>The application contains no third-party advertising networks, analytics services, or tracking SDKs.</p>
+    </section>
+
+    <section aria-labelledby="advertising">
+      <h2 id="advertising">2. Third-Party Advertising (Google AdMob)</h2>
+      <p>Elixir Video Player uses the <strong>Google Mobile Ads SDK (AdMob)</strong>, provided by Google LLC, to serve
+        banner advertisements within the library interface. To deliver, measure, and secure ads, the Google Mobile Ads
+        SDK may automatically collect and transmit the following data to Google:</p>
+      <ul>
+        <li><strong>Device &amp; Advertising Identifiers:</strong> Android Advertising ID (subject to your device
+          privacy settings and Teen age-restricted treatment) and app set/instance identifiers for ad delivery,
+          frequency capping, and fraud prevention.</li>
+        <li><strong>Approximate Location:</strong> Coarse geographic location inferred from your IP address.</li>
+        <li><strong>Ad Interactions:</strong> Ad impressions, views, and taps/clicks.</li>
+        <li><strong>Diagnostics &amp; Device Info:</strong> SDK crash logs, performance diagnostics, and basic device
+          attributes (such as screen size, device model, OS version, and network connection type) required to render ads
+          reliably.</li>
+      </ul>
+      <p><strong>Teen (13+) Ad Safeguards:</strong> Ad requests in Elixir Video Player are configured with a maximum ad
+        content rating of <strong>Teen (<code>MAX_AD_CONTENT_RATING_T</code>)</strong> and <strong>Teen Age-Restricted
+          Treatment (<code>AgeRestrictedTreatment.TEEN</code>)</strong>, restricting mature ad categories and limiting
+        ad personalization in line with Google's teen protection policies.</p>
+      <p><strong>Your Ad Privacy Choices:</strong> You can reset or delete your Android Advertising ID or opt out of ad
+        personalization at any time on your device via <strong>Settings &rarr; Privacy &rarr; Ads</strong> (or
+        <strong>Settings &rarr; Google &rarr; All services &rarr; Ads</strong>). Learn more in <a
+          href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a> and <a
+          href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">How Google uses
+          information from sites or apps that use our services</a>.</p>
     </section>
 
     <section aria-labelledby="local-data">
-      <h2 id="local-data">2. Data Stored Locally on Your Device</h2>
+      <h2 id="local-data">3. Data Stored Locally on Your Device</h2>
       <p>To provide media library features and seamless playback, the app stores non-personal state strictly inside its
         private storage sandbox on your device:</p>
       <ul>
@@ -239,12 +266,13 @@
         <li><strong>Thumbnail Cache:</strong> Video preview thumbnails generated locally from your media files and saved
           in the app's private cache directory for fast scrolling.</li>
       </ul>
-      <p>None of this local data is transmitted to the developer or any third party.</p>
+      <p>None of your local media metadata, bookmarks, or watch history is shared with Google AdMob or any third party.
+      </p>
     </section>
 
     <section aria-labelledby="permissions">
-      <h2 id="permissions">3. Permissions &amp; Device Access</h2>
-      <p>Elixir Video Player requests only the Android permissions required for core playback functionality:</p>
+      <h2 id="permissions">4. Permissions &amp; Device Access</h2>
+      <p>Elixir Video Player requests only the Android permissions required for playback and ad-supported operation:</p>
       <ul>
         <li><strong>Media Access (<code>READ_MEDIA_VIDEO</code> on Android 13+ / <code>READ_EXTERNAL_STORAGE</code> on
             Android 12 and earlier):</strong> Used exclusively on-device via Android <code>MediaStore</code> to discover
@@ -254,11 +282,14 @@
           confirmation prompt and occurs only when you explicitly confirm deletion. Loading external subtitle files
           (such as <code>.srt</code>) uses the Android system file picker, granting read access solely to the file you
           choose.</li>
-        <li><strong>Internet Access (<code>INTERNET</code>):</strong> Used strictly when you manually enter a network
-          stream link in the <strong>Play from URL</strong> feature (supporting direct HTTP/HTTPS media, HLS, and DASH
-          streams). Elixir Video Player makes no background network connections and operates no backend servers. When
-          you stream from a third-party URL, your device connects directly to that host, which receives standard network
-          request data (such as your IP address) under that provider's own privacy policy.</li>
+        <li><strong>Network &amp; Connectivity (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Used
+          for two purposes: (1) checking network availability and loading banner advertisements via Google AdMob, and
+          (2) streaming video when you manually enter a link in the <strong>Play from URL</strong> feature (supporting
+          HTTP/HTTPS, HLS, and DASH). When you stream from a third-party URL you provide, your device connects directly
+          to that host under that provider's own privacy policy.</li>
+        <li><strong>Advertising ID (<code>com.google.android.gms.permission.AD_ID</code>):</strong> Declared by the
+          Google Mobile Ads SDK on Android 13+ to read the user-resettable Advertising ID where permitted by your device
+          settings and Teen age-restricted ad configuration.</li>
         <li><strong>Playback Controls:</strong> Audio volume gestures, player window brightness gestures, media session
           controls, and Picture-in-Picture (PiP) mode operate locally during active playback without recording or
           exporting any data.</li>
@@ -266,9 +297,9 @@
     </section>
 
     <section aria-labelledby="retention">
-      <h2 id="retention">4. Data Retention, Backup &amp; Deletion</h2>
-      <p>All app settings, bookmarks, playback positions, and cached thumbnails remain on your device for as long as the
-        app is installed. You have full control over this data at any time:</p>
+      <h2 id="retention">5. Data Retention, Backup &amp; Deletion</h2>
+      <p>All app settings, bookmarks, playback positions, and cached thumbnails remain locally on your device under your
+        control:</p>
       <ul>
         <li><strong>Clear Cache or Storage:</strong> Open your device's <strong>Settings &rarr; Apps &rarr; Elixir
             Player &rarr; Storage &amp; cache</strong> to clear cached thumbnails (<em>Clear cache</em>) or reset all
@@ -278,30 +309,40 @@
         <li><strong>Android System Backup:</strong> If Android Auto Backup is enabled in your device's operating system
           settings, Android may include app preferences in your personal system/cloud device backup. Those backups are
           governed by your device or OS provider's privacy policy; the developer cannot access them.</li>
+        <li><strong>Advertising Data:</strong> Data processed by the Google Mobile Ads SDK is retained and managed by
+          Google in accordance with <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's
+            Privacy Policy</a>. You can reset or delete your Advertising ID in your Android system settings at any time.
+        </li>
       </ul>
     </section>
 
-    <section aria-labelledby="children">
-      <h2 id="children">5. Children's Privacy</h2>
-      <p>Elixir Video Player does not knowingly collect any personal information from anyone, including children under
-        the age of 13 (or the applicable minimum age in your jurisdiction).</p>
+    <section aria-labelledby="audience">
+      <h2 id="audience">6. Target Audience (13+) &amp; Children's Privacy</h2>
+      <p>Elixir Video Player is intended solely for users aged <strong>13 years and older</strong> (or the applicable
+        minimum age in your jurisdiction) and is <strong>not directed to children under 13</strong>. If you are under
+        13, please do not install or use this application.</p>
+      <p>To protect teen users, ad requests are restricted to a maximum content rating of <strong>Teen
+          (<code>T</code>)</strong> with <strong>Teen age-restricted treatment</strong> enabled. We do not knowingly
+        collect personal information from children under 13. If you are a parent or guardian and believe a child under
+        13 has used the app, please contact us so we can assist.</p>
     </section>
 
     <section aria-labelledby="changes">
-      <h2 id="changes">6. Changes to This Privacy Policy</h2>
-      <p>If future updates to Elixir Video Player alter how data or permissions are handled, this Privacy Policy will be
-        updated on this page with a revised effective date.</p>
+      <h2 id="changes">7. Changes to This Privacy Policy</h2>
+      <p>If future updates to Elixir Video Player alter how data, advertising, or permissions are handled, this Privacy
+        Policy will be updated on this page with a revised date.</p>
     </section>
 
     <section aria-labelledby="contact">
-      <h2 id="contact">7. Contact</h2>
+      <h2 id="contact">8. Contact</h2>
       <p>If you have any questions about this Privacy Policy or Elixir Video Player, please open an issue or reach out
         via our <a href="https://github.com/y-ziane/elixir-privacy" rel="noopener noreferrer">GitHub repository</a>.</p>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 Elixir Video Player. Static page hosted on GitHub Pages with zero cookies or trackers.
+    &copy; 2026 Elixir Video Player. Static policy page hosted on GitHub Pages (this webpage uses no cookies or
+    trackers).
   </footer>
 </body>
 

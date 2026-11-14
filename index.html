@@ -200,8 +200,8 @@
     <header>
       <div class="brand"><span>Elixir</span>Player</div>
       <h1>Privacy Policy</h1>
-      <p class="meta">Last Updated: November 8, 2026 &middot; App: Elixir Video Player
-        (<code>com.media.elixirplayer</code>) &middot; Audience: 13+</p>
+      <p class="meta">Last Updated: November 14, 2026 &middot; App: Elixir Video Player
+        (<code>com.media.elixirplayer</code>) &middot; Developer: Ayoub Ziane &middot; Audience: 13+</p>
     </header>
 
     <div class="summary">
@@ -242,8 +242,13 @@
         content rating of <strong>Teen (<code>MAX_AD_CONTENT_RATING_T</code>)</strong> and <strong>Teen Age-Restricted
           Treatment (<code>AgeRestrictedTreatment.TEEN</code>)</strong>, restricting mature ad categories and limiting
         ad personalization in line with Google's teen protection policies.</p>
-      <p><strong>Your Ad Privacy Choices:</strong> You can reset or delete your Android Advertising ID or opt out of ad
-        personalization at any time on your device via <strong>Settings &rarr; Privacy &rarr; Ads</strong> (or
+      <p><strong>EEA, UK &amp; Swiss User Consent (Google UMP SDK):</strong> Where required by applicable data
+        protection laws (including GDPR in the European Economic Area, the UK, and Switzerland), Elixir Video Player
+        uses Google's certified <strong>User Messaging Platform (UMP) SDK</strong> to request and respect your consent
+        choices before loading ads. Where applicable, you can review or update your consent preferences at any time
+        directly inside the app via <strong>Settings &rarr; Ad Privacy Settings</strong>.</p>
+      <p><strong>Your Ad Privacy Choices:</strong> You can also reset or delete your Android Advertising ID or opt out
+        of ad personalization at any time on your device via <strong>Settings &rarr; Privacy &rarr; Ads</strong> (or
         <strong>Settings &rarr; Google &rarr; All services &rarr; Ads</strong>). Learn more in <a
           href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a> and <a
           href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">How Google uses
@@ -287,9 +292,11 @@
           (2) streaming video when you manually enter a link in the <strong>Play from URL</strong> feature (supporting
           HTTP/HTTPS, HLS, and DASH). When you stream from a third-party URL you provide, your device connects directly
           to that host under that provider's own privacy policy.</li>
-        <li><strong>Advertising ID (<code>com.google.android.gms.permission.AD_ID</code>):</strong> Declared by the
-          Google Mobile Ads SDK on Android 13+ to read the user-resettable Advertising ID where permitted by your device
-          settings and Teen age-restricted ad configuration.</li>
+        <li><strong>Advertising ID &amp; SDK Network State (<code>com.google.android.gms.permission.AD_ID</code>,
+            <code>READ_BASIC_PHONE_STATE</code>):</strong> Declared automatically by the Google Mobile Ads Next-Gen SDK
+          manifest to read the user-resettable Advertising ID (where permitted by your device settings, UMP consent, and
+          Teen age-restricted ad configuration) and basic non-identifying network connection state. The app never
+          accesses your phone number, SIM serial number, IMEI, or call state.</li>
         <li><strong>Playback Controls:</strong> Audio volume gestures, player window brightness gestures, media session
           controls, and Picture-in-Picture (PiP) mode operate locally during active playback without recording or
           exporting any data.</li>
@@ -335,8 +342,14 @@
 
     <section aria-labelledby="contact">
       <h2 id="contact">8. Contact</h2>
-      <p>If you have any questions about this Privacy Policy or Elixir Video Player, please open an issue or reach out
-        via our <a href="https://github.com/y-ziane/elixir-privacy" rel="noopener noreferrer">GitHub repository</a>.</p>
+      <p>This Privacy Policy is accessible at any time inside Elixir Video Player via <strong>Settings &rarr; Privacy
+          Policy</strong> and on the web at <a href="https://y-ziane.github.io/elixir-privacy/"
+          rel="noopener noreferrer">https://y-ziane.github.io/elixir-privacy/</a>.</p>
+      <p>If you have any questions or requests regarding this Privacy Policy or Elixir Video Player, please contact the
+        developer (<strong>Ayoub Ziane</strong>) by opening an issue on our <a
+          href="https://github.com/y-ziane/elixir-privacy/issues" rel="noopener noreferrer">GitHub Support &amp; Privacy
+          Repository</a> or via email at <a
+          href="mailto:71417149+y-ziane@users.noreply.github.com">71417149+y-ziane@users.noreply.github.com</a>.</p>
     </section>
   </main>
 
